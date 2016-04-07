@@ -11,6 +11,20 @@ class LogosController < ApplicationController
     @logo = Logo.new
   end
 
+  def edit
+    @logo = Logo.find(params[:id])
+  end
+
+  def update
+    @logo = Logo.find(params[:id])
+
+    if @logo.update_attributes(logo_params)
+      redirect_to "/logos/#{@logo.id}"
+    else render :edit
+    end
+  end
+
+
   def create
     # render :text => "Saving a Logo. URL: #{params[:url]}, Team: #{params[:team]}, Conference: #{params[:conference]}"
     @logo = Logo.new(logo_params)

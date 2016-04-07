@@ -1,0 +1,34 @@
+<h1>Edit Picture</h1>
+  <p>
+    <%= link_to "Back", @logo %>
+  </p>
+
+  <%= form_for @logo do |f| %>
+  <div>
+    <p>
+      <%= f.label :team %><br>
+      <%= f.text_field :team %>
+    </p>
+  </div>
+
+  <div>
+    <p>
+      <%= f.label :conference %><br>
+      <%= f.text_field :conference %>
+    </p>
+  </div>
+
+  <div>
+    <p>
+      <%= f.label :url %><br>
+      <%= f.text_field :url %>
+    </p>
+  </div>
+
+  <div>
+    <p>
+      <%= f.submit "Edit" %>
+    </p>
+  </div>
+
+<% end %>

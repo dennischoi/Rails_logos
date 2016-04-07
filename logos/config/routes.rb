@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   post 'logos' => 'logos#create'
   get 'logos/new' => 'logos#new'
 
+  get 'logos/:id/edit' => 'logos#edit', as: 'edit_logo'
+  patch 'logos/:id' => 'logos#update'
+
   get 'logos/:id' => 'logos#show', as: 'logo'
 
 
