@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  roots 'logos#index'
+  root 'logos#index'
   get 'logos' => 'logos#index'
 
   post 'logos' => 'logos#create'

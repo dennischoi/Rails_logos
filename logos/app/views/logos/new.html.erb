@@ -1,5 +1,6 @@
 <h1>Add a Logo</h1>
-<%= form_for "/logos" do %>
+<%= link_to "Back to All Logos", logos_url %>
+<%= form_for "/logos" do |f| %>
   <div>
     <p>
       <%= f.label :team %><br>

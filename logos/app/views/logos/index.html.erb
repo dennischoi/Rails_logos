@@ -1,9 +1,9 @@
 <h1>NBA Logos</h1>
+<%= link_to "New Logo", "/logos/new" %>
 
 <% @logos.each do |logo| %>
   <p>
     <%= logo.team %>, <%= logo.conference %>
   </p>
-  <img src="<%= logo.url %>">
-
+  <%= link_to image_tag(logo.url), "/logos/#{logo.id}" %>
 <% end %>
