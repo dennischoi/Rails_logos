@@ -1,26 +1,26 @@
 <h1>Add a Logo</h1>
-<%= form_tag "/logos" do %>
+<%= form_for "/logos" do %>
   <div>
     <p>
-      <%= label_tag :team %><br>
-      <%= text_field_tag :team %>
+      <%= f.label :team %><br>
+      <%= f.text_field :team %>
     </p>
   </div>
     <div>
       <p>
-        <%= label_tag :conference %><br>
-        <%= text_field_tag :conference %>
+        <%= f.label :conference %><br>
+        <%= f.text_field :conference %>
       </p>
     </div>
     <div>
       <p>
-        <%= label_tag :url %><br>
-        <%= text_field_tag :url %>
+        <%= f.label :url %><br>
+        <%= f.text_field :url %>
       </p>
     </div>
     <div>
       <p>
-        <%= submit_tag "Save" %>
+        <%= f.submit "Save" %>
       </p>
     </div>
 
