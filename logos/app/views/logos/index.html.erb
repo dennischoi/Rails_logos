@@ -1,1 +1,9 @@
 <h1>NBA Logos</h1>
+
+<% @logos.each do |logo| %>
+  <p>
+    <%= logo.team %>, <%= logo.conference %>
+  </p>
+  <img src="<%= logo.url %>">
+
+<% end %>
