@@ -1,0 +1,27 @@
+<h1>Add a Logo</h1>
+<%= form_tag "/logos" do %>
+  <div>
+    <p>
+      <%= label_tag :team %><br>
+      <%= text_field_tag :team %>
+    </p>
+  </div>
+    <div>
+      <p>
+        <%= label_tag :conference %><br>
+        <%= text_field_tag :conference %>
+      </p>
+    </div>
+    <div>
+      <p>
+        <%= label_tag :url %><br>
+        <%= text_field_tag :url %>
+      </p>
+    </div>
+    <div>
+      <p>
+        <%= submit_tag "Save" %>
+      </p>
+    </div>
+
+<% end %>
